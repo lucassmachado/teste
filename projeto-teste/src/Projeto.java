@@ -1,14 +1,12 @@
-
 public class Projeto {
 
-	private String descricao;
-	
+	private final String descricao;
+
+	public Projeto(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
-	
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
 }
