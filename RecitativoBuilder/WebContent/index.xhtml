@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Construtor de Recitativo</title>
+	<style>
+		*{
+			font-family: "Arial", sans-serif;
+		}
+		
+		#principal {
+			width: 500px;
+			height: 300px;
+			border: 1px solid #000;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+		
+		#formRecitativo{
+			padding: 10px; 
+		}
+		
+		.cabecalho {
+			text-align: center;
+		}
+	</style>
+</h:head>
+<h:body>
+	<div id="principal">
+		<h2 class="cabecalho">CONGREGAÇÃO CRISTÃ NO BRASIL</h2>
+		<h:form id="formRecitativo" prependId="false">
+			<h:outputLabel value="Livro:" for="livro" />
+			<h:selectOneMenu id="livro">
+				<f:selectItems value="#{recitativoBean.livros}" var="livro"
+					itemValue="#{livro.nome}" itemLabel="#{livro.nome}" />
+			</h:selectOneMenu>
+
+			<br />
+
+			<h:outputLabel value="Capítulo:" for="capitulo" />
+			<h:inputText id="capitulo" />
+		</h:form>
+	</div>
+</h:body>
+</html>
+
