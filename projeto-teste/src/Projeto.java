@@ -1,9 +1,12 @@
 public class Projeto {
 
+	private final String nome;
+	
 	private final String descricao;
 	private String atividades;
 
-	public Projeto(String descricao) {
+	public Projeto(String nome, String descricao) {
+		this.nome = nome;
 		this.descricao = descricao;
 	}
 
