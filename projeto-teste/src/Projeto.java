@@ -1,13 +1,18 @@
 public class Projeto {
 
 	private final String nome;
-	
+
 	private final String descricao;
+
 	private String atividades;
 
 	public Projeto(String nome, String descricao) {
 		this.nome = nome;
 		this.descricao = descricao;
+	}
+
+	public String getNome() {
+		return nome;
 	}
 
 	public String getDescricao() {
